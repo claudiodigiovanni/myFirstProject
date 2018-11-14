@@ -1,0 +1,12 @@
+
+<table class="table table-striped">
+    <th scope="col"><strong>ID</strong></th>
+    <th scope="col"><strong>NOME</strong></th>
+    <th scope="col"><strong>USERNAME</strong></th>
+
+    <tr *ngFor = "let u of utenti | async">
+        <td><a [routerLink]="['/viewcomponent/', u.id]">{{u.id}}</a></td>
+        <td>{{u.name}}</td>
+        <td>{{u.username}}</td>
+    </tr>
+</table>

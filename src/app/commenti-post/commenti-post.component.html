@@ -1,0 +1,13 @@
+<table class="table table-striped">
+
+  <th><strong>EMAIL</strong></th>
+  <th><strong>CONTENUTO</strong></th>
+
+
+
+  <tr *ngFor="let commento of commenti$ | async">
+
+    <td>{{commento.email}}</td>
+    <td>{{commento.body}}</td>
+  </tr>
+</table>

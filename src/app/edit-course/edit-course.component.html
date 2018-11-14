@@ -1,0 +1,25 @@
+<form #myform="ngForm" >
+    <div *ngIf="utente">
+        <div>
+        <label>ID: </label>
+        <input type="text" class="form-control" name="id" id="id"  placeholder="id" 
+        [(ngModel)]="utente.id">
+    </div><br>
+
+    <div>
+        <label>NOME</label>
+        <input type="text" class="form-control" name="name" id="name"  placeholder="name" 
+        [(ngModel)]="utente.name">
+    </div><br>
+
+
+    <label>COGNOME</label>
+    <input type="text" class="form-control" name="username" id="username"  placeholder="username" 
+    [(ngModel)]="utente.username"><br>
+
+
+    </div>
+    <button type="button" name="" id="" class="btn btn-dark btn-lg btn-block" 
+    (click)="save()" [disabled]="myform.invalid">save</button>
+</form>
+

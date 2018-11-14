@@ -1,0 +1,27 @@
+<table class="table table-striped">
+
+    <th><strong>ID</strong></th>
+    <th><strong>NOME</strong></th>
+    <th><strong>USERNAME</strong></th>
+
+    <tr>
+        <td>{{(utente$ | async)?.id}}</td>
+        <td>{{(utente$ | async)?.name}}</td>
+        <td>{{(utente$ | async)?.username}}</td>
+    </tr>
+</table>
+<button type="button" name="" id="" class="btn btn-dark btn-lg btn-block" 
+[routerLink]="['/editcomponent/', id]" >Modifica!</button>
+
+
+
+<table class="table table-striped">
+    <th><strong>TITOLO</strong></th>
+
+    <tr *ngFor="let post of posts | async">
+
+        <td>{{post.title}}</td>
+        <td><a class="btn btn-primary btn-sm active" role="button" aria-pressed="true"
+            [routerLink]="['/commentPost/', post.id]">Vai ai commenti</a></td>
+    </tr>
+</table>
